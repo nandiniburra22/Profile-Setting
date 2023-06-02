@@ -1,0 +1,107 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Security Section -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvSecurity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Security"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:layout_marginStart="8dp" />
+
+    </RelativeLayout>
+
+
+    <!-- Create Face ID -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvFaceId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Face ID"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:layout_marginStart="8dp" />
+
+        <Switch
+            android:id="@+id/switchFaceIdStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Remember Me -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvRememberMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remember Me"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:layout_marginStart="8dp" />
+
+        <Switch
+            android:id="@+id/switchRememberMeStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"/>
+
+    </LinearLayout>
+
+    <!-- Touch ID -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+
+        <TextView
+            android:id="@+id/tvTouchId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Touch ID Available"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:layout_marginStart="8dp" />
+
+        <Switch
+            android:id="@+id/switchTouchIdStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+
+    <!-- Change Password Button -->
+    <Button
+        android:id="@+id/btnChangePassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:background="@color/Watermelon"
+        android:text="Change Password"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>
