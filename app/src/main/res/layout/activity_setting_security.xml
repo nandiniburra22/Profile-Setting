@@ -1,6 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <!-- Security Section -->
@@ -41,10 +42,12 @@
             android:id="@+id/switchFaceIdStatus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp" />
+            android:layout_marginStart="270dp" />
     </LinearLayout>
 
-    <!-- Remember Me -->
+
+
+    <!-- Touch ID -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -55,20 +58,19 @@
             android:id="@+id/tvRememberMe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:text="Remember Me"
             android:textColor="@android:color/black"
-            android:textSize="16sp"
-            android:layout_marginStart="8dp" />
+            android:textSize="16sp" />
 
         <Switch
             android:id="@+id/switchRememberMeStatus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"/>
+            android:layout_marginStart="220dp" />
 
     </LinearLayout>
 
-    <!-- Touch ID -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -89,19 +91,24 @@
             android:id="@+id/switchTouchIdStatus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp" />
+            android:layout_marginStart="200dp" />
     </LinearLayout>
 
 
     <!-- Change Password Button -->
-    <Button
-        android:id="@+id/btnChangePassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="16dp"
-        android:background="@color/Watermelon"
+    <EditText
+        android:id="@+id/etChangePassword"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/button_style1"
         android:text="Change Password"
-        android:textColor="@android:color/white" />
+        android:textColor="@color/Watermelon"
+        android:textAlignment="center" />
+
+
+
+
 
 </LinearLayout>

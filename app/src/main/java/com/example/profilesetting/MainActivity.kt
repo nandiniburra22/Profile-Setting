@@ -1,56 +1,53 @@
 package com.example.profilesetting
 
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Spinner
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.menu.MaterialMenuItem
+import com.google.android.material.menu.MaterialPopupMenu
 
-class Profilesetting : AppCompatActivity() {
-
-    private lateinit var etFullName: EditText
-    private lateinit var etEmail: EditText
-    private lateinit var etPhoneNumber: EditText
-    private lateinit var spinnerGender: Spinner
-    private lateinit var etAge: EditText
-    private lateinit var etAbout: EditText
-    private lateinit var etInterest: EditText
-    private lateinit var etAddress: EditText
-    private lateinit var btnSaveChanges: Button
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_profilesetting)
+        setContentView(R.layout.activity_main)
 
-        etFullName = findViewById(R.id.etFullName)
-        etEmail = findViewById(R.id.etEmail)
-        etPhoneNumber = findViewById(R.id.etPhoneNumber)
-        spinnerGender = findViewById(R.id.spinnerGender)
-        etAge = findViewById(R.id.etAge)
-        etAbout = findViewById(R.id.etAbout)
-        etInterest = findViewById(R.id.etInterest)
-        etAddress = findViewById(R.id.etAddress)
-        btnSaveChanges = findViewById(R.id.btnSaveChanges)
-
+        // TODO: Add your code here
+        // You can access the views by their respective IDs and perform any necessary operations
+        val btnSaveChanges = findViewById<Button>(R.id.btnSaveChanges)
         btnSaveChanges.setOnClickListener {
-            saveChanges()
+            // Perform action on button click
+            // For example, you can retrieve the text from EditText fields
+            val fullName = findViewById<EditText>(R.id.etFullName).text.toString()
+            val email = findViewById<EditText>(R.id.etEmail).text.toString()
+            val phoneNumber = findViewById<EditText>(R.id.etPhoneNumber).text.toString()
+// Inside your activity or fragment code
+            val genderMenu = findViewById<MaterialPopupMenu>(R.id.genderMenu)
+            val maleMenuItem = findViewById<MaterialMenuItem>(R.id.maleMenuItem)
+            val femaleMenuItem = findViewById<MaterialMenuItem>(R.id.femaleMenuItem)
+
+// Set click listeners for menu items
+            maleMenuItem.setOnMenuItemClickListener { menuItem ->
+                // Handle male menu item click
+                true // Return true if you have consumed the event
+            }
+
+            femaleMenuItem.setOnMenuItemClickListener { menuItem ->
+                // Handle female menu item click
+                true // Return true if you have consumed the event
+            }
+
+// Show the popup menu when needed
+            genderMenu.show()
+
+            val about = findViewById<EditText>(R.id.etAbout).text.toString()
+            val interest = findViewById<EditText>(R.id.etInterest).text.toString()
+            val address = findViewById<EditText>(R.id.etAddress).text.toString()
+
+            // You can then use the retrieved values as needed
+            // For instance, you can save them to a database or display them in a Toast message
+            // Example Toast message:
+            val message = "Full Name: $fullName\nEmail: $email\nPhone Number: $phoneNumber\nAbout: $about\nInterest: $interest\nAddress: $address"
+            Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
         }
     }
-
-    private fun saveChanges() {
-        val fullName = etFullName.text.toString()
-        val email = etEmail.text.toString()
-        val phoneNumber = etPhoneNumber.text.toString()
-        val gender = spinnerGender.selectedItem.toString()
-        val age = etAge.text.toString()
-        val about = etAbout.text.toString()
-        val interest = etInterest.text.toString()
-        val address = etAddress.text.toString()
-
-        // Save the profile data to your app's backend or preferences
-
-        Toast.makeText(this, "Changes saved", Toast.LENGTH_SHORT).show()
-    }
 }
-

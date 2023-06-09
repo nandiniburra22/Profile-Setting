@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -27,18 +28,18 @@
 
         <!-- Full Name -->
         <TextView
-            android:id="@+id/tvFullName"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Full Name"
             android:textColor="@android:color/black"
-            android:textSize="16sp"
+            android:textSize="17sp"
             android:textStyle="bold" />
 
-        <Button
+        <EditText
             android:id="@+id/etFullName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="360dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_style1"
             android:textColor="@android:color/black" />
 
         <!-- Email -->
@@ -51,10 +52,11 @@
             android:textSize="16sp"
             android:textStyle="bold" />
 
-        <Button
+        <EditText
             android:id="@+id/etEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="360dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_style1"
             android:textColor="@android:color/black" />
 
         <!-- Phone Number -->
@@ -67,71 +69,60 @@
             android:textSize="16sp"
             android:textStyle="bold" />
 
-        <Button
+        <EditText
             android:id="@+id/etPhoneNumber"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="360dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_style1"
             android:textColor="@android:color/black" />
 
-        <!-- Gender -->
-        <LinearLayout
-            android:layout_width="match_parent"
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/genderToggleGroup"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            app:singleSelection="true">
 
-            <TextView
-                android:id="@+id/tvGender"
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/genderButton"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Gender"
-                android:textColor="@android:color/black"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                app:iconGravity="textStart"
+                app:icon="@drawable/ic_arrow_drop_down"
+                app:iconTint="@color/colorPrimary"
+                app:iconSize="24dp"
+                app:cornerFamily="rounded"
+                app:cornerRadius="16dp"
+                app:backgroundTint="@color/colorBackground"
+                app:backgroundTintMode="src_in"
+                app:strokeWidth="2dp"
+                app:strokeColor="@color/colorPrimary"
+                app:dropdownIconTint="@color/colorPrimary"
+                app:dropdownBackgroundColor="@color/colorBackground"
+                app:dropdownVerticalOffset="8dp"
+                app:dropdownHorizontalOffset="8dp"
+                app:dropdownWidth="wrap_content"
+                app:dropdownMaxHeight="200dp"
+                app:dropdownHorizontalAlignLeft="true"
+                app:dropdownItemStyle="@style/Widget.MaterialComponents.Button.TextButton"/>
 
-            <RadioGroup
-                android:id="@+id/radioGroupGender"
+            <com.google.android.material.menu.MaterialPopupMenu
+                android:id="@+id/genderMenu"
+                app:popupTheme="@style/Widget.MaterialComponents.PopupMenu"
+                app:showBackground="false"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                tools:ignore="MissingClass">
 
-                <RadioButton
-                    android:id="@+id/radioButtonMale"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Male"
-                    android:textColor="@android:color/black" />
+                <com.google.android.material.menu.MaterialMenuItem
+                    android:id="@+id/maleMenuItem"
+                    android:title="Male" />
 
-                <RadioButton
-                    android:id="@+id/radioButtonFemale"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Female"
-                    android:textColor="@android:color/black" />
-
-                <RadioButton
-                    android:id="@+id/radioButtonOther"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Other"
-                    android:textColor="@android:color/black" />
-            </RadioGroup>
-        </LinearLayout>
-
-        <!-- Age -->
-        <TextView
-            android:id="@+id/tvAge"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Age"
-            android:textColor="@android:color/black"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/etAge"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@android:color/black" />
+                <com.google.android.material.menu.MaterialMenuItem
+                    android:id="@+id/femaleMenuItem"
+                    android:title="Female" />
+            </com.google.android.material.menu.MaterialPopupMenu>
 
         <!-- About -->
         <TextView
@@ -143,10 +134,11 @@
             android:textSize="16sp"
             android:textStyle="bold" />
 
-        <Button
+        <EditText
             android:id="@+id/etAbout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="360dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_style1"
             android:textColor="@android:color/black" />
 
         <!-- Interest -->
@@ -159,10 +151,11 @@
             android:textSize="16sp"
             android:textStyle="bold" />
 
-        <Button
+        <EditText
             android:id="@+id/etInterest"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="360dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_style1"
             android:textColor="@android:color/black" />
 
         <!-- Address -->
@@ -175,25 +168,23 @@
             android:textSize="16sp"
             android:textStyle="bold" />
 
-        <Button
+        <EditText
             android:id="@+id/etAddress"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="360dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_style1"
             android:textColor="@android:color/black" />
 
         <!-- Save Changes Button -->
         <Button
             android:id="@+id/btnSaveChanges"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+            android:layout_width="360dp"
+            android:layout_height="50dp"
             android:layout_marginTop="16dp"
-            android:background="@color/Watermelon"
             android:text="Save Changes"
-            android:textColor="@android:color/white" />
+            android:background="@drawable/button_style1"
+            android:textColor="@android:color/black" />
 
     </LinearLayout>
 
 </LinearLayout>
-
-

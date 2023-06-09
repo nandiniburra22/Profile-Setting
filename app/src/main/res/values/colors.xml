@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
         <color name="Watermelon">#FF4D67</color>
-</resources>
+        <color name="colorPrimary">#E1D6D6</color>
+        <color name="colorbackground">#E1D6D6</color>
 
+
+</resources>
