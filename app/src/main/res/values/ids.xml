@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="Locklayout" type="id">Locklayout</item>
+    <item name="GenderSpinner" type="id" />
+    <item name="AgeSpinner" type="id" />
+    <item name="btnInvite" type="id" />
+    <item name="switchVibrate" type="id" />
+    <item name="switchNewService" type="id" />
+    <item name="btn_change_password" type="id" />
+    <item name="et_current_password" type="id" />
 </resources>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
 
     <TextView
@@ -20,7 +20,8 @@
         android:orientation="horizontal"
         android:text="Edit Profile"
         android:textColor="@android:color/black"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        tools:ignore="HardcodedText" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -32,7 +33,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="6dp"
-        android:src="@drawable/arrow_icon" />
+        android:src="@drawable/arrow_icon"
+        tools:ignore="ContentDescription" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -42,7 +44,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="2dp"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="2dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="0dp"
         android:orientation="vertical"
@@ -57,13 +59,20 @@
             android:textSize="17sp"
             android:textStyle="bold" />
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:backgroundTint="#FF4D67" />
+
+
         <EditText
             android:id="@+id/etFullName"
             android:layout_width="360dp"
             android:layout_height="50dp"
             android:background="@drawable/button_style1"
             android:paddingStart="10dp"
-            android:hint="Nandu"
+            android:hint="Allan Felix"
+            android:layout_marginTop="2dp"
             android:textColor="@android:color/black" />
 
         <!-- Email -->
@@ -76,13 +85,19 @@
             android:textSize="16sp"
             android:textStyle="bold" />
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:backgroundTint="#FF4D67" />
+
+
         <EditText
             android:id="@+id/etEmail"
             android:layout_width="360dp"
             android:layout_height="50dp"
             android:background="@drawable/button_style1"
             android:drawableRight="@drawable/drawable_email"
-            android:hint="nandiniburra28@gmail.com"
+            android:hint="adamsmithdomain@gmail.com"
             android:paddingRight="9dp"
             android:paddingStart="10dp"
             android:textColor="@android:color/black" />
@@ -97,13 +112,19 @@
             android:textSize="16sp"
             android:textStyle="bold" />
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:backgroundTint="#FF4D67" />
+
+
         <EditText
             android:id="@+id/etPhoneNumber"
             android:layout_width="360dp"
-            android:layout_height="50dp"
+            android:layout_height="48dp"
             android:background="@drawable/button_style1"
             android:drawableRight="@drawable/drawable_phone"
-            android:hint="8309736535"
+            android:hint="+334567839087"
             android:paddingStart="10dp"
             android:paddingRight="9dp"
             android:textColor="@android:color/black" />
@@ -133,7 +154,8 @@
                 android:text="Gender"
                 android:textColor="@android:color/black"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="TextSizeCheck" />
 
             <TextView
                 android:id="@+id/tvAge"
@@ -144,7 +166,8 @@
                 android:text="Age"
                 android:textColor="@android:color/black"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="TextSizeCheck" />
 
 
         </LinearLayout>
@@ -164,7 +187,8 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="10dp"
                 android:layout_weight="1"
-                android:background="@drawable/spinner_style1" />
+                android:background="@drawable/spinner_style1"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
 
             <Spinner
@@ -174,7 +198,9 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="10dp"
                 android:layout_weight="1"
-                android:background="@drawable/spinner_style1"/>
+                android:background="@drawable/spinner_style1"
+                android:contentDescription="@string/spinner2_prompt"
+                tools:ignore="TouchTargetSizeCheck" />
 
         </LinearLayout>
 
@@ -188,12 +214,18 @@
             android:textSize="16sp"
             android:textStyle="bold" />
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:backgroundTint="#FF4D67" />
+
+
         <EditText
             android:id="@+id/etAbout"
             android:layout_width="360dp"
             android:layout_height="80dp"
             android:background="@drawable/button_style2"
-            android:hint="Student"
+            android:hint="**********************"
             android:paddingStart="10dp"
             android:textColor="@android:color/black" />
 
@@ -206,6 +238,12 @@
             android:textColor="@android:color/black"
             android:textSize="16sp"
             android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:backgroundTint="#FF4D67" />
+
 
         <EditText
             android:id="@+id/etInterest"
@@ -228,26 +266,35 @@
             android:textSize="16sp"
             android:textStyle="bold" />
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:backgroundTint="#FF4D67" />
+
+
         <EditText
             android:id="@+id/etAddress"
             android:layout_width="360dp"
             android:layout_height="50dp"
             android:background="@drawable/button_style1"
             android:drawableRight="@drawable/drawable_location"
-            android:hint="Enter your address"
+            android:hint="Los Angels"
             android:paddingRight="9dp"
             android:paddingStart="10dp"
             android:textColor="@android:color/black" />
 
-        <EditText
-            android:id="@+id/etSaveChanges"
+        <Button
+            android:id="@+id/btnSaveChanges"
             android:layout_width="360dp"
             android:layout_height="50dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/watermelon_bg"
             android:text="Save Changes"
-            android:textAlignment="center"
-            android:textColor="@android:color/black" />
+            android:textColor="#FFFFFF"
+            tools:ignore="VisualLintButtonSize,TextContrastCheck" />
+
+
+
 
     </LinearLayout>
 </RelativeLayout>

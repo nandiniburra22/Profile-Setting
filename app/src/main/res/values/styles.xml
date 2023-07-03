@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-        <!-- App theme -->
-        <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-            <!-- Customize your theme here -->
-        </style>
+    <!-- App theme -->
+    <style name="AppTheme" parent="AppTheme.NoActionBar">
+        <!-- Customize your theme here -->
+        <item name="colorPrimary">#FF4D67</item>
+        <item name="colorAccent">#E1D6D6</item>
+        <item name="android:windowBackground">@color/white</item>
+        <!-- Add more attributes as per your requirements -->
+    </style>
 
 </resources>

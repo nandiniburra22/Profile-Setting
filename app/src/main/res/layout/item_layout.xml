@@ -18,7 +18,8 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="20dp">
+        tools:layout_editor_absoluteY="20dp"
+        tools:ignore="UselessParent">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/imageView"
@@ -31,7 +32,8 @@
                 android:layout_height="90dp"
                 android:layout_marginEnd="10dp"
                 android:background=" @android:color/black"
-                android:src="@drawable/item1" />
+                android:src="@drawable/photo"
+                tools:ignore="ContentDescription" />
 
         </androidx.cardview.widget.CardView>
 
@@ -50,21 +52,23 @@
             <TextView
                 android:layout_width="150dp"
                 android:layout_height="20dp"
-                android:hint="+916787676768" />
+                android:hint="+916787676768"
+                tools:ignore="VisualLintBounds" />
 
         </LinearLayout>
 
-        <EditText
-            android:id="@+id/etInvite"
+        <Button
+            android:id="@+id/btInvite"
             android:layout_width="95dp"
             android:layout_height="50dp"
             android:layout_marginStart="265dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/button_style2"
+            android:background="@drawable/button_style7"
             android:gravity="center"
             android:text="Invite"
             android:textColor="#FF4D67"
-            android:textsize="50dp" />
+            android:textsize="50dp"
+            tools:ignore="MissingConstraints"/>
 
 
     </RelativeLayout>
